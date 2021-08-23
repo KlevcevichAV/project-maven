@@ -18,6 +18,9 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <spring-version>2.5.4</spring-version>
+        <lombok-version>1.18.20</lombok-version>
+        <model-mapper-version>2.4.4</model-mapper-version>
     </properties>
 
     <dependencies>
@@ -25,16 +28,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
-            <version>2.5.3</version>
+            <version>${spring-version}</version>
             <optional>true</optional>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.2.23</version>
-        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
@@ -67,13 +65,13 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.5.3</version>
+                <version>${spring-version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
-                <version>2.5.3</version>
+                <version>${spring-version}</version>
             </dependency>
 
         </dependencies>
