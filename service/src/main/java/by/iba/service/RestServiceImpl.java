@@ -21,9 +21,7 @@ public class RestServiceImpl implements RestService {
     public List<UserDto> test() {
         List<User> usersList = repository.findAll();
         List<UserDto> result = new ArrayList<>();
-        for (User user : usersList) {
-            result.add(mapper.toDto(user));
-        }
+        usersList.forEach(e -> result.add(mapper.toDto(e)));
         return result;
     }
 
