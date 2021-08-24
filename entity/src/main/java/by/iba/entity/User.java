@@ -15,10 +15,10 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @Column(name = "id", unique = true, nullable = false)
     private Long id;
 
-    @Column(name = "name")
+    @Column(name = "name", length = 13)
     private String name;
 
 }

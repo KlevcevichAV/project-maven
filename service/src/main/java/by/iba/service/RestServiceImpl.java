@@ -18,6 +18,7 @@ public class RestServiceImpl implements RestService {
     private final UserMapper mapper;
 
     public List<UserDto> test() {
+
         return repository
                 .findAll()
                 .stream()

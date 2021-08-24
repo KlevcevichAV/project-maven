@@ -3,11 +3,9 @@ package by.iba.controller;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication
-@ComponentScan(basePackages = {"by.iba"})
+@SpringBootApplication(scanBasePackages = "by.iba")
 @EnableJpaRepositories(basePackages = "by.iba")
 @EntityScan(basePackages = "by.iba")
 public class Application {

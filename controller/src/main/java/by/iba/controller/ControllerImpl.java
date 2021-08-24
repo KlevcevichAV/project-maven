@@ -15,8 +15,12 @@ public class ControllerImpl implements Controller{
 
     private final RestService service;
 
+    @Override
     public ResponseEntity<List<UserDto>> findAll() {
-        return ResponseEntity.status(HttpStatus.OK).body(service.test());
+
+        return ResponseEntity
+                .ok()
+                .body(service.test());
     }
 
 }
