@@ -14,7 +14,7 @@
     <dependencies>
 
         <dependency>
-            <groupId>org.example</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>entity</artifactId>
         </dependency>
 
