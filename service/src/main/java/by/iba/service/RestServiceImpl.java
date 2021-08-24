@@ -2,13 +2,12 @@ package by.iba.service;
 
 import by.iba.dto.UserDto;
 import by.iba.dto.mapper.UserMapper;
-import by.iba.entity.User;
 import by.iba.repository.RestRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @AllArgsConstructor
@@ -19,10 +18,11 @@ public class RestServiceImpl implements RestService {
     private final UserMapper mapper;
 
     public List<UserDto> test() {
-        List<User> usersList = repository.findAll();
-        List<UserDto> result = new ArrayList<>();
-        usersList.forEach(e -> result.add(mapper.toDto(e)));
-        return result;
+        return repository
+                .findAll()
+                .stream()
+                .map(mapper::toDto)
+                .collect(Collectors.toList());
     }
 
 }
